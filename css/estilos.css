@@ -299,7 +299,7 @@ figure {
 }
 
 .container {
-  border: 1px solid red;
+  /* border: 1px solid red;  */
   width: 1000px;
   margin: 0 auto;
   display: inherit;
@@ -308,3 +308,4 @@ figure {
   height: inherit;
   flex-wrap: inherit;
 }
+
