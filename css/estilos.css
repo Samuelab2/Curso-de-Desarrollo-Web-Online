@@ -1,3 +1,41 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?ce8ak3');
+    src:  url('../fonts/icomoon.eot?ce8ak3#iefix') format('embedded-opentype'), /* se usa para internet explorer */
+    url('../fonts/icomoon.ttf?ce8ak3') format('truetype'),
+    url('../fonts/icomoon.woff?ce8ak3') format('woff'),
+    url('../fonts/icomoon.svg?ce8ak3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Selectores de css */
+
+/* [class^="icon-"] = significa que cualquier elemento que tenga una clase que empiece con icon- se le asignara ese bloque de codigo */
+
+/* [class*=" icon-"] = se refiere a un selector que indica que cualquier clase que dentro de su nombre en algun lugar tenga icon-, se le asigna el codigo */
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* pseudo elementos de css */
+
+.icon-menu:before {
+  content: "\e900";
+}
+
 header {
   background-color: pink;
 }
