@@ -457,10 +457,42 @@ figure {
 
   .header a {
     justify-content: center;
+    height: 40px;
+    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: .5em;
   }
 
   .header .logo {
     text-align: center;
+  }
+
+  /* Creamos el estilo para el menu de navegacion */
+
+  .menu {
+    /* se fija el icono para que nos siga cuando hacemos scroll */
+    position: fixed;
+    background: rgba(2, 111, 255, .9);
+    z-index: 3;
+    /* se posicionan los elementos del menu */
+    top: 0;
+    /* escondemos el menu de la vista */
+    left: -100vw;
+    /* establecemos el ancho y alto del menu, utilizando la medida vw(viewport width) y vh (viewport height)*/
+    width: 100vw;
+    /* height: 100vh; */
+    /* alineamos el contenido al centro */
+    display: flex;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    /* colocamos un poco de animaciones */
+    transition: .3s;
+  }
+
+  /* establecemos que muestre el menu, cuando cambie de clase (cuando una clase tiene doble punto solo se va a activar cuando el elemento tenga ambas clases) */
+  .menu.is-active {
+    left: 0;
   }
 
   .project {
