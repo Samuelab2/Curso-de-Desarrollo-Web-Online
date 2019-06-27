@@ -384,6 +384,28 @@ figure {
   position: relative;
 }
 
+.burger-buttom {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .8);
+  /* Se coloca oculto por defecto, ya que solo deberia ser visible en pantallas moviles */
+  display: none;
+  /* Centramos el icono en el medio del dibujo */
+  line-height: 40px;
+  text-align: center;
+  /* hacemos que el icono nos persiga cuando hagamos scroll y lo coloquemos por encima de todo */
+  position: fixed;
+  z-index: 5;
+  /* arreglamos su ubicacion */
+  left: 5px;
+  top: 5px;
+  /* Coloreamos el icono (recordemos que fue exportado como una fuente) */
+  color: white;
+  font-size: 20px;
+}
+
+
 /* Desktop-first */
 
 @media screen and (max-width: 1024px) {
@@ -414,6 +436,11 @@ figure {
   }
 
 @media screen and (max-width: 767px) {
+
+  /* cambiamos el tipo de display cuando cumple la condicion del tamaño de pantalla */
+  .burger-buttom {
+    display: block;
+  }
 
   .header {
     display: block;
