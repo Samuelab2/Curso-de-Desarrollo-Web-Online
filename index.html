@@ -198,14 +198,28 @@
     // le agregamos la clase "is-active" al menu en html
     // document.querySelector(".menu").classList.add("is-active");
     // Se declara una variable (constante) para obtener el elemento por la clase .menu
+ 
+    const ipad = window.matchMedia("screen and (max-width: 767px)")
     const menu = document.querySelector(".menu");
-    console.log(menu);
+    // console.log(menu);
     // se declara en variable (constante) el elemento del menu hamburgesa
     const burgerButtom = document.querySelector("#burger-menu");
-    console.log(burgerButtom);
+    // console.log(burgerButtom);
     // creamos el evento de click para mostrar mi menu
-    burgerButtom.addEventListener("click", hideShow)
     // declaramos la funcion que se ejecutara con el click
+
+    ipad.addListener(validation)
+
+    // se crea una funcion para quitar el escucha del evento cuando no se necesite, es decir cuando estamos trabajando en un desktop, es importante realizar estas optimizaciones ya que la paguina web sera menos pesada
+
+    function validation(event) {
+      if (event.matches) {
+        burgerButtom.addEventListener("click", hideShow)
+      } else {
+        burgerButtom.removeEventListener("click", hideShow)
+      }      
+    }
+
     function hideShow() {
       // si el elemento menu contiene la clase is-active, quitala. si no, agregasela
       if (menu.classList.contains("is-active")) {
