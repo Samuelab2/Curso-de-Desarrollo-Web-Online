@@ -18,7 +18,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: none;
+  speak-as: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -437,6 +437,11 @@ figure {
 
 @media screen and (max-width: 767px) {
 
+  h2 {
+    font-size: 1.2em;
+    margin: .5em, 0;
+  }
+
   /* cambiamos el tipo de display cuando cumple la condicion del tamaño de pantalla */
   .burger-buttom {
     display: block;
@@ -583,6 +588,7 @@ figure {
 }
 
 @media screen and (max-width: 320px) {
+
   h1 {
     font-size: 1.2em;
     /* background: rgba(0, 0, 0, 0.5) */
