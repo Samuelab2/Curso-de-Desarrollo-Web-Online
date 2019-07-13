@@ -506,7 +506,7 @@ figure {
 
   .project-details {
     width: auto;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .project-course, .project-date, .project-url {
@@ -531,7 +531,7 @@ figure {
   }
 
   .project-description {
-    font-size: .8em;
+    font-size: 1em;
   }
 
   .event {
@@ -552,7 +552,7 @@ figure {
   }
 
   .project-details {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .event-detail {

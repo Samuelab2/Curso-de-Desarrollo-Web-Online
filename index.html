@@ -208,7 +208,7 @@
     // creamos el evento de click para mostrar mi menu
     // declaramos la funcion que se ejecutara con el click
 
-    ipad.addListener(validation)
+    ipad.addListener(validation);
 
     // se crea una funcion para quitar el escucha del evento cuando no se necesite, es decir cuando estamos trabajando en un desktop, es importante realizar estas optimizaciones ya que la paguina web sera menos pesada
 
@@ -219,6 +219,10 @@
         burgerButtom.removeEventListener("click", hideShow)
       }      
     }
+
+    // se llama la funcion para que el menu hamburguesa funcione en moviles, antes no servia por q el evento se activaba cuando la pantalla hacia resize
+
+    validation(ipad);
 
     function hideShow() {
       // si el elemento menu contiene la clase is-active, quitala. si no, agregasela
