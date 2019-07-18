@@ -408,7 +408,7 @@ figure {
 
 /* Desktop-first */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .container {
     padding: 0 .8em;    
   }
